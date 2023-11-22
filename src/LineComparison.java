@@ -18,11 +18,30 @@ public class LineComparison {
         int x2=sc.nextInt();
         int y2=sc.nextInt();
 
-        //Calculating and printing the length of line
-        double length=Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2));
+        //Calculating and printing the length of first line
+        double length1=Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2));
 
-        System.out.println("The length of the line between two coordinates is: "+length);
+        System.out.println("The length of the first line : "+length1);
 
+        System.out.println("Enter the coordinates of (x3,y3) of 2nd line");
+        int x3=sc.nextInt();
+        int y3=sc.nextInt();
+
+
+        System.out.println("Enter the coordinates (x4,y4) of the line");
+        int x4=sc.nextInt();
+        int y4=sc.nextInt();
+
+        //Calculating and printing the length of second line
+        double length2=Math.sqrt(Math.pow(x3-x4,2)+Math.pow(y3-y4,2));
+
+        System.out.println("The length of the second line : "+length2);
+
+        //Checking if both the lengths are equal
+        if(length1==length2)
+            System.out.println("The length of two lines is equal");
+        else
+            System.out.println("The length of two lines is not equal");
 
 
 
