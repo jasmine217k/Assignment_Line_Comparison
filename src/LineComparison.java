@@ -19,7 +19,7 @@ public class LineComparison {
         int y2=sc.nextInt();
 
         //Calculating and printing the length of first line
-        double length1=Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2));
+        Double length1=Math.sqrt(Math.pow(x1-x2,2)+Math.pow(y1-y2,2));
 
         System.out.println("The length of the first line : "+length1);
 
@@ -33,18 +33,25 @@ public class LineComparison {
         int y4=sc.nextInt();
 
         //Calculating and printing the length of second line
-        double length2=Math.sqrt(Math.pow(x3-x4,2)+Math.pow(y3-y4,2));
+        Double length2=Math.sqrt(Math.pow(x3-x4,2)+Math.pow(y3-y4,2));
 
         System.out.println("The length of the second line : "+length2);
 
-        //Checking if both the lengths are equal
-        if(length1==length2)
-            System.out.println("The length of two lines is equal");
-        else
-            System.out.println("The length of two lines is not equal");
+        //Comparing both the lengths
+        int result = length1.compareTo(length2);
 
-
-
+        if (result < 0) {
+            System.out.println("Line1 is smaller in length than Line2");
+        } else if (result > 0) {
+            System.out.println("Line1 is greater in length than Line2");
+        } else {
+            System.out.println("Line1 is equal in length to Line2");
         }
+
+
+
+
+
+    }
 
 }
